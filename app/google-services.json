@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "950113040388",
+    "firebase_url": "https://kesturi-1f02e.firebaseio.com",
+    "project_id": "kesturi-1f02e",
+    "storage_bucket": "kesturi-1f02e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950113040388:android:c9dcc62ba65011af6c9d51",
+        "android_client_info": {
+          "package_name": "com.example.kesturi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950113040388-q4a4453qivq3m584pj5k4rreqtnkvvlp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kesturi",
+            "certificate_hash": "bc3fe6436d348879ed746349456a46c73ff6b70e"
+          }
+        },
+        {
+          "client_id": "950113040388-nuu9128e9s72e4sug6ssqf0nvdkfhlgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-M4IlMGsWBmtOkxjqiOqioWk0EAL_Sh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950113040388-nuu9128e9s72e4sug6ssqf0nvdkfhlgc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

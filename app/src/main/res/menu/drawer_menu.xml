@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_exit"
+            android:title="Profile" />
+        <item
+            android:icon="@drawable/ic_exit"
+            android:title="Rekam Medis" />
+        <item
+            android:icon="@drawable/ic_exit"
+            android:title="Pengingat"/>
+        <item
+            android:icon="@drawable/ic_exit"
+            android:title="Pengaturan"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_exit"
+            android:title="Logout" />
+</menu>
