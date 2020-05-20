@@ -18,6 +18,8 @@ public class HomeFragment extends Fragment {
     private Button buttonQna;
     private Button buttonTips;
     private Button buttonAgenda;
+    private Button buttonCancer;
+    private Button buttonHiv;
 
     @Nullable
     @Override
@@ -29,7 +31,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Objects.requireNonNull(getActivity()).getApplicationContext(), WorkerActivity.class));
-                getActivity().finish();
+                getActivity();
             }
         });
 
@@ -38,7 +40,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Objects.requireNonNull(getActivity()).getApplicationContext(), QnaActivity.class));
-                getActivity().finish();
+                getActivity();
             }
         });
 
@@ -47,7 +49,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Objects.requireNonNull(getActivity()).getApplicationContext(), TipsActivity.class));
-                getActivity().finish();
+                getActivity();
             }
         });
 
@@ -56,7 +58,26 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Objects.requireNonNull(getActivity()).getApplicationContext(), AgendaActivity.class));
-                getActivity().finish();
+                getActivity();
+            }
+        });
+
+
+        buttonCancer = view.findViewById(R.id.bcancer);
+        buttonCancer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Objects.requireNonNull(getActivity()).getApplicationContext(), CancerActivity.class));
+                getActivity();
+            }
+        });
+
+        buttonHiv = view.findViewById(R.id.bhiv);
+        buttonHiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Objects.requireNonNull(getActivity()).getApplicationContext(), HivActivity.class));
+                getActivity();
             }
         });
 
