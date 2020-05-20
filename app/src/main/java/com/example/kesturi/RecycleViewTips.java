@@ -6,32 +6,33 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
-public class RecycleViewCancer extends RecyclerView.Adapter<RecycleViewCancer.ViewHolder> {
+public class RecycleViewTips extends RecyclerView.Adapter<RecycleViewTips.ViewHolder> {
 
     private static final String TAG = "RecycleViewQna";
 
-    private ArrayList<String> mQuestionText = new ArrayList<>();
-    private ArrayList<String> mAnswerText = new ArrayList<>();
+    private ArrayList<String> mImage = new ArrayList<>();
     private Context mContext;
 
-    public RecycleViewCancer(Context context, ArrayList<String> questionText, ArrayList<String> answerText) {
-        mQuestionText = questionText;
-        mAnswerText = answerText;
+    public RecycleViewTips(Context context, ArrayList<String> imageUrls) {
+        mImage = imageUrls;
         mContext = context;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_qnalist, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_tipslist, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -39,36 +40,35 @@ public class RecycleViewCancer extends RecyclerView.Adapter<RecycleViewCancer.Vi
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         Log.d(TAG, "onBindViewHolder");
+        Log.d(TAG, mImage.get(position));
 
-        holder.mQuestion.setText(mQuestionText.get(position));
+        Glide.with(mContext)
+                .asBitmap()
+                .load(mImage.get(position))
+                .into(holder.mImageGo);
 
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, mQuestionText.get(position));
-                Log.d(TAG, mAnswerText.get(position));
-                Intent intent = new Intent(view.getContext(), AnswerActivity.class);
-                intent.putExtra("question", mQuestionText.get(position));
-                intent.putExtra("answer", mAnswerText.get(position));
-                view.getContext().startActivity(intent);
+                Log.d(TAG, mImage.get(position));
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return mQuestionText.size();
+        return mImage.size();
     }
 
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView mQuestion;
+        ImageView mImageGo;
         RelativeLayout parentLayout;
 
         public ViewHolder(View itemView){
             super(itemView);
-            mQuestion = itemView.findViewById(R.id.question);
-            parentLayout = itemView.findViewById(R.id.parent_layout);
+            mImageGo = itemView.findViewById(R.id.image);
+            parentLayout = itemView.findViewById(R.id.parent_tips);
         }
     }
 }
