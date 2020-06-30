@@ -1,4 +1,4 @@
-package com.example.kesturi;
+package com.app.kesturi;
 
 import android.app.Activity;
 import android.content.Intent;

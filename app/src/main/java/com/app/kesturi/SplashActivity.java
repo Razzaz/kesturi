@@ -1,4 +1,4 @@
-package com.example.kesturi;
+package com.app.kesturi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,15 +6,16 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Objects;
 
-public class NewsActivity extends AppCompatActivity {
-
-    private TextView buttonBack;
+public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +27,25 @@ public class NewsActivity extends AppCompatActivity {
             Objects.requireNonNull(this.getSupportActionBar()).hide();
         }
         catch (NullPointerException ignored){}
-        setContentView(R.layout.activity_news);
 
-        buttonBack = findViewById(R.id.bback);
-        buttonBack.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_splash);
+
+        int SPLASH_SCREEN = 3000;
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(NewsActivity.this, TipsActivity.class));
-                finish();
+            public void run() {
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null) {
+                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Intent intent = new Intent(SplashActivity.this, WelcomeActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
-        });
+        }, SPLASH_SCREEN);
 
     }
 

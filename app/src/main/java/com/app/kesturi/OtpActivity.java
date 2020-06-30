@@ -1,4 +1,4 @@
-package com.example.kesturi;
+package com.app.kesturi;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

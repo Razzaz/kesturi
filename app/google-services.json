@@ -8,6 +8,43 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:950113040388:android:f8891cad512e401b6c9d51",
+        "android_client_info": {
+          "package_name": "com.app.kesturi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950113040388-lln28du7k2am33de8j9n740hldfu2s59.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.kesturi",
+            "certificate_hash": "bc3fe6436d348879ed746349456a46c73ff6b70e"
+          }
+        },
+        {
+          "client_id": "950113040388-nuu9128e9s72e4sug6ssqf0nvdkfhlgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-M4IlMGsWBmtOkxjqiOqioWk0EAL_Sh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950113040388-tmku3mhb12ui6qsd51f0odsflsngbb1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:950113040388:android:c9dcc62ba65011af6c9d51",
         "android_client_info": {
           "package_name": "com.example.kesturi"
@@ -36,7 +73,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "950113040388-nuu9128e9s72e4sug6ssqf0nvdkfhlgc.apps.googleusercontent.com",
+              "client_id": "950113040388-tmku3mhb12ui6qsd51f0odsflsngbb1t.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,4 +1,4 @@
-package com.example.kesturi;
+package com.app.kesturi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,14 +12,13 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
-public class WorkerActivity extends AppCompatActivity {
+public class AnswerActivity extends AppCompatActivity {
 
     private TextView buttonBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setTransparentStatusBarOnly(this);
 
         try
@@ -27,17 +26,25 @@ public class WorkerActivity extends AppCompatActivity {
             Objects.requireNonNull(this.getSupportActionBar()).hide();
         }
         catch (NullPointerException ignored){}
-
-        setContentView(R.layout.activity_worker);
+        setContentView(R.layout.activity_answer);
 
         buttonBack = findViewById(R.id.bback);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(WorkerActivity.this, MainActivity.class));
+                startActivity(new Intent(AnswerActivity.this, MainActivity.class));
                 finish();
             }
         });
+
+        String question = getIntent().getStringExtra("question");
+        String answer = getIntent().getStringExtra("answer");
+
+        TextView mQuestion = findViewById(R.id.question);
+        TextView mAnswer = findViewById(R.id.answer);
+
+        mQuestion.setText(question);
+        mAnswer.setText(answer);
 
     }
 

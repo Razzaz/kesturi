@@ -1,4 +1,4 @@
-package com.example.kesturi;
+package com.app.kesturi;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -65,6 +65,15 @@ public class TipsActivity extends AppCompatActivity {
         mImageUrls.add("https://live.staticflickr.com/65535/49916168307_dd891fffd0_c.jpg");
         mImageUrls.add("https://live.staticflickr.com/65535/49915350863_84e90fc1a7_c.jpg");
         mImageUrls.add("https://live.staticflickr.com/65535/49915861941_4aa928ffce_c.jpg");
+
+        mImageUrls.add("https://live.staticflickr.com/65535/50060565721_4b26f2fd4a_c.jpg");
+        mImageUrls.add("https://live.staticflickr.com/65535/50060554321_964f7aa431_k.jpg");
+        mImageUrls.add("https://live.staticflickr.com/65535/50059991268_eebe21f2db_k.jpg");
+        mImageUrls.add("https://live.staticflickr.com/65535/50060554561_6667448eba_c.jpg");
+        mImageUrls.add("https://live.staticflickr.com/65535/50059991783_8b1bb6f2b3_k.jpg");
+        mImageUrls.add("https://live.staticflickr.com/65535/50060555216_5844ad1fbb_k.jpg");
+        mImageUrls.add("https://live.staticflickr.com/65535/50060555416_4c499f866c_c.jpg");
+        mImageUrls.add("https://live.staticflickr.com/65535/50060802137_6f5c783345_b.jpg");
 
         initRecyclerView();
 
